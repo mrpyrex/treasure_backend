@@ -13,7 +13,7 @@ SECRET_KEY = '5gay-cfpy9^tze&@os05e)x!i#&v_4gpx&i0s(1s8ik)5rz^$6'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['peaceful-harbor-44828.herokuapp.com']
 
 
 # Application definition
