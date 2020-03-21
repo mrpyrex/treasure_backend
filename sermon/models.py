@@ -10,5 +10,12 @@ class Track(models.Model):
     created_by = models.CharField(max_length=250)
     # author = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
 
+    class Meta:
+        ordering = ('-created_at',)
+
+    class Meta:
+        verbose_name = 'sermon'
+        verbose_name_plural = 'Sermons'
+
     def __str__(self):
         return self.title
