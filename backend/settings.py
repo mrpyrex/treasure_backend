@@ -32,6 +32,8 @@ INSTALLED_APPS = [
 
     'housecare.apps.HousecareConfig',
     'sermon.apps.SermonConfig',
+    'blog.apps.BlogConfig',
+    'testimony.apps.TestimonyConfig',
 
 ]
 

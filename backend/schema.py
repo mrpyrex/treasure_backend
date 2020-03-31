@@ -1,14 +1,16 @@
 import graphene
+import users.schema
 import housecare.schema
 import sermon.schema
+import blog.schema
 import graphql_jwt
 
 
-class Query(housecare.schema.Query, sermon.schema.Query,  graphene.ObjectType):
+class Query(users.schema.Query, blog.schema.Query, housecare.schema.Query, sermon.schema.Query,  graphene.ObjectType):
     pass
 
 
-class Mutation(housecare.schema.Mutation, sermon.schema.Mutation,  graphene.ObjectType):
+class Mutation(users.schema.Mutation, blog.schema.Mutation, housecare.schema.Mutation, sermon.schema.Mutation,  graphene.ObjectType):
     token_auth = graphql_jwt.ObtainJSONWebToken.Field()
     verify_token = graphql_jwt.Verify.Field()
     refresh_token = graphql_jwt.Refresh.Field()
