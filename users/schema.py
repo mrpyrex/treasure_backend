@@ -13,7 +13,7 @@ class Query(graphene.ObjectType):
     me = graphene.Field(AuthorType)
     authors = graphene.List(AuthorType)
 
-    def resolve_user(self, info, id):
+    def resolve_author(self, info, id):
         return User.objects.get(id=id)
 
     def resolve_authors(self, info):
