@@ -20,7 +20,7 @@ class Query(graphene.ObjectType):
         return User.objects.all()
 
     def resolve_me(self, info):
-        author = info.context.author
+        author = info.context.user
         if author.is_anonymous:
             raise Exception("You are not logged in")
 
