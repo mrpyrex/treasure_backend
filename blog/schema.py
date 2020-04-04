@@ -66,6 +66,7 @@ class CreatePost(graphene.Mutation):
         title = graphene.String()
         content = graphene.String()
         thumb = graphene.String()
+        category = graphene.String()
 
     def mutate(self, info, **kwargs):
         author = info.context.user
